@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Angular Slider</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/animate.css">
+</head>
+
+<body ng-app="steps">
+  <div class="wrapper">
+    <div class="wrapper-header align-center">
+      <div class="links">
+        <a ui-sref="step-1" class="link-item">1</a>
+        <a ui-sref="step-2" class="link-item">2</a>
+        <a ui-sref="step-3" class="link-item">3</a>
+      </div>
+      <h1 class="display-inline">Angular Slider</h1><!--
+      --><div class="helper"></div>
+      <h1></h1>
+    </div>
+    <div class="wrapper-body align-center">
+      <div class="slider" ng-controller="directionController">
+        <div
+          ui-view
+          class="slider-items"
+          ng-class="{back: back}"
+            ></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- cdns -->
+  <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-animate.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
+
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/routes.js"></script>
+</body>
+
+</html>

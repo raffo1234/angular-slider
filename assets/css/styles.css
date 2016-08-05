@@ -1,0 +1,273 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+
+/*helper*/
+
+.align-center {
+  text-align: center;
+}
+
+.display-inline {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  width: 0;
+}
+
+.slider {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider .slide {
+  height: 100%;
+  font-size: 3em;
+}
+
+.slider-items {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.step-1 {
+  background-color: #39f9ee;
+}
+
+.step-2 {
+  background-color: #f9ae39;
+}
+
+.step-3 {
+  background-color: #39f98a;
+}
+
+.links {
+  position: absolute;
+  left: 15px;
+  margin-top: -15px;
+  top: 50%;
+}
+
+.link-item {
+  background-color: #c1bfbf;
+  color: #fff;
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  text-decoration: none;
+  width: 30px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+}
+
+
+/*content*/
+
+.wrapper {
+  background-color: #f6f6f6;
+  height: 100%;
+}
+
+.wrapper-header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  padding: 15px;
+  padding-left: 125px;
+  padding-right: 125px;
+}
+
+.wrapper-body {
+  height: 100%;
+  padding: 100px 15px 15px;
+}
+
+.slider-items.ng-enter,
+.slider.items.ng-leave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.slider-items.no-animate {
+   transition: none !important;
+  -moz-transition: none !important;
+  -webkit-transition: none !important;
+}
+
+/*TO LEFT*/
+
+
+/* enter animation */
+
+.slider-items.ng-enter {
+  -webkit-animation: slideInRight 0.45s both ease;
+  -moz-animation: slideInRight 0.45s both ease;
+  animation: slideInRight 0.45s both ease;
+}
+
+
+/* leave animation */
+
+.slider-items.ng-leave {
+  -webkit-animation: slideOutLeft 0.45s both ease;
+  -moz-animation: slideOutLeft 0.45s both ease;
+  animation: slideOutLeft 0.45s both ease;
+}
+
+
+/*TO RIGHT*/
+
+
+/* enter animation */
+
+.back.slider-items.ng-enter {
+  -webkit-animation: slideInLeft 0.45s both ease;
+  -moz-animation: slideInLeft 0.45s both ease;
+  animation: slideInLeft 0.45s both ease;
+}
+
+.back.slider-items.ng-leave {
+  -webkit-animation: slideOutRight 0.45s both ease;
+  -moz-animation: slideOutRight 0.45s both ease;
+  animation: slideOutRight 0.45s both ease;
+}
+
+
+/* ANIMATIONS TO LEFT
+============================================================================= */
+
+
+/* slide out to the left */
+
+@keyframes slideOutLeft {
+  to {
+    transform: translateX(-200%);
+  }
+}
+
+@-moz-keyframes slideOutLeft {
+  to {
+    -moz-transform: translateX(-200%);
+  }
+}
+
+@-webkit-keyframes slideOutLeft {
+  to {
+    -webkit-transform: translateX(-200%);
+  }
+}
+
+
+/* slide in from the right */
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(200%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@-moz-keyframes slideInRight {
+  from {
+    -moz-transform: translateX(200%);
+  }
+  to {
+    -moz-transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes slideInRight {
+  from {
+    -webkit-transform: translateX(200%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+  }
+}
+
+
+/* ANIMATIONS TO RIGHT
+============================================================================= */
+
+
+/* slide out to the left */
+
+@keyframes slideOutRight {
+  to {
+    transform: translateX(200%);
+  }
+}
+
+@-moz-keyframes slideOutRight {
+  to {
+    -moz-transform: translateX(200%);
+  }
+}
+
+@-webkit-keyframes slideOutRight {
+  to {
+    -webkit-transform: translateX(200%);
+  }
+}
+
+
+/* slide in from the right */
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-200%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@-moz-keyframes slideInLeft {
+  from {
+    -moz-transform: translateX(-200%);
+  }
+  to {
+    -moz-transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes slideInLeft {
+  from {
+    -webkit-transform: translateX(-200%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+  }
+}
